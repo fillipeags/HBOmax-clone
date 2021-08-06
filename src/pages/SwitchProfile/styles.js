@@ -7,6 +7,10 @@ export const Container = styled.main`
   display:flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 376px) {
+    justify-content: center;
+  }
 `;
 
 export const Header = styled.header`
@@ -26,6 +30,10 @@ export const Heading = styled.h1`
   font-weight: 400;
   color: ${({ theme }) => theme.colors.gray[200]};
   margin-top: 40px;
+
+  @media (max-width: 376px) {
+    font-size: 24px;
+  }
 `;
 
 export const ProfilesContainer = styled.div`

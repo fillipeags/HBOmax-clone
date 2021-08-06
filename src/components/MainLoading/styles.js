@@ -13,6 +13,12 @@ export const Container = styled.main`
     width: 400px;
   }
   background: linear-gradient(to right, #9A35EF , #4B00C4, #4176D6);
+
+  @media (max-width: 426px) {
+    img {
+      width: 260px;
+    }
+  }
 `;
 
 export const LoaderContainer = styled.div`

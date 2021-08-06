@@ -22,6 +22,30 @@ export const Container = styled.header`
     background: ${({ theme }) => theme.colors.gray[900]};
     transition: 0.15s ease-in;
   }
+
+
+  @media (max-width: 426px) {
+    button {
+      margin-right:40px;
+    }
+    button:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 321px) {
+    justify-content: center;
+    img {
+      width:120px;
+    }
+
+    button {
+      margin:10px;
+    }
+    button:nth-child(2) {
+      display: none;
+    }
+  }
 `;
 
 export const ProfileContainer = styled.div`
@@ -40,6 +64,12 @@ export const ProfileContainer = styled.div`
   h3 {
     color: ${({ theme }) => theme.colors.gray[100]}
   }
+
+  @media (max-width: 426px) {
+    h3{
+      display: none;
+    }
+  }
 `;
 
 export const ImgContainer = styled.div`
@@ -50,7 +80,7 @@ export const ImgContainer = styled.div`
   width: 36px;
   height: 36px;
   background: none;
-  border: 4px solid rgb(91,19, 200);;
+  border: 4px solid rgb(91,19, 200);
   border-radius: 100px;
   overflow:hidden;
 

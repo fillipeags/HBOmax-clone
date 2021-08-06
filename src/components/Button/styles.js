@@ -36,4 +36,15 @@ export const Button = styled.button`
     background-color: rgb(91,28,230);
     transition: 0.3s ease-in-out;
   }
+
+  @media (max-width: 426px) {
+    width: 180px;
+    * + & {margin-left: 20px; }
+  }
+
+  @media (max-width: 376px) {
+    width: 140px;
+    * + & {margin-left: 20px; }
+  }
+
 `;

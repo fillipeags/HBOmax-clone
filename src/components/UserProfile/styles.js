@@ -25,6 +25,11 @@ export const ImageContainer = styled.div`
   justify-content: center;
 
   overflow: hidden;
+
+  @media (max-width: 376px) {
+    width: 110px;
+    height: 110px;
+  }
 `;
 
 export const ProfilePic = styled.img`
