@@ -18,7 +18,7 @@ export default function SplashLoading() {
       <Redirect to="/profiles" />
     );
   }
-  setIsLoading(true);
+  // setIsLoading(true);
 
   return (
     <Container>
