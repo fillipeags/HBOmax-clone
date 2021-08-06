@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logoImg from '../../assets/images/logo.svg';
 import profileImg from '../../assets/images/profileImage.png';
 import profileImg2 from '../../assets/images/profileVariant.png';
@@ -18,7 +19,9 @@ export default function SwitchProfile() {
       </Header>
 
       <ProfilesContainer>
-        <UserProfile profileImg={profileImg} userName="Fillipe" />
+        <Link to="/home">
+          <UserProfile profileImg={profileImg} userName="Fillipe" />
+        </Link>
         <UserProfile profileImg={profileImg2} userName="João" />
       </ProfilesContainer>
 
