@@ -14,6 +14,12 @@ export const Container = styled.main`
   }
   background: linear-gradient(to right, #9A35EF , #4B00C4, #4176D6);
 
+  @media (min-width: 1366px) {
+    img {
+      width:600px;
+    }
+  }
+
   @media (max-width: 426px) {
     img {
       width: 260px;
