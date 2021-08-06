@@ -7,6 +7,10 @@ const Reset = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'MartelSans', sans-serif;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export default Reset;

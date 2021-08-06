@@ -15,7 +15,7 @@ export default function SplashLoading() {
 
   if (isLoading === false) {
     return (
-      <Redirect to="/" />
+      <Redirect to="/profiles" />
     );
   }
 
