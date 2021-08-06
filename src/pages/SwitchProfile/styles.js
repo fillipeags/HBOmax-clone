@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.main`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(82.06deg, #02023A -4.68%, #200B6F 15.51%, #4F1AC2 70.47%, #962BE0 101.08%);
+  background: linear-gradient(40deg, hsla(290, 60%, 26%, 1) 4%, hsla(0, 0%, 0%, 1) ,68%, hsla(260, 90%, 24%, 1) 80%, hsla(257, 74%, 36%, 1) 100%);
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +23,8 @@ export const Logo = styled.img`
 
 export const Heading = styled.h1`
   font-size: 48px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.colors.gray[300]};
+  font-weight: 400;
+  color: ${({ theme }) => theme.colors.gray[200]};
   margin-top: 40px;
 `;
 

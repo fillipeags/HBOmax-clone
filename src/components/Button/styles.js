@@ -9,7 +9,7 @@ export const Button = styled.button`
   height: 44px;
   border: none;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
+  background:rgba(255, 255, 255, 0.1);
   text-transform: uppercase;
   margin-top: 50px;
   margin-bottom: 28px;
