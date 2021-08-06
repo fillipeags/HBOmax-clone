@@ -30,6 +30,11 @@ export const ImageContainer = styled.div`
     width: 110px;
     height: 110px;
   }
+
+  @media (max-width: 426px) {
+    width: 140px;
+    height: 140px;
+  }
 `;
 
 export const ProfilePic = styled.img`

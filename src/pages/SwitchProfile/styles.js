@@ -34,6 +34,10 @@ export const Heading = styled.h1`
   @media (max-width: 376px) {
     font-size: 24px;
   }
+
+  @media (max-width: 426px) {
+    font-size: 40px;
+  }
 `;
 
 export const ProfilesContainer = styled.div`
