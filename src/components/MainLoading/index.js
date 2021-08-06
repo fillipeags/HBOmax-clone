@@ -10,15 +10,15 @@ export default function SplashLoading() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 3000);
   });
-  setIsLoading(true);
 
   if (isLoading === false) {
     return (
       <Redirect to="/profiles" />
     );
   }
+  setIsLoading(true);
 
   return (
     <Container>
