@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import bgImg from '../../assets/images/bgImg.png';
 
 export const Container = styled.main`
-  width: 100vw;
   height: 100vh;
-  background: linear-gradient(40deg, hsla(290, 60%, 26%, 1) 4%, hsla(0, 0%, 0%, 1) ,68%, hsla(260, 90%, 24%, 1) 80%, hsla(257, 74%, 36%, 1) 100%);
+  background: url(${bgImg});
   display:flex;
   flex-direction: column;
   align-items: center;

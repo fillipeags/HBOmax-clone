@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import mainImg from '../../assets/images/mortalkombat.jpeg';
 
 export const BannerContainer = styled.main`
-  width: 100vw;
-  height: 680px;
+  height: 720px;
   background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)),  url(${mainImg});
   background-size: 100% 100%;
   display: flex;
