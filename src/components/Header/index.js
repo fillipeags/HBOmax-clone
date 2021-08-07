@@ -8,10 +8,10 @@ export default function Header() {
     <Container>
       <div>
         <button type="button">
-          <RiMenu2Fill size={24} color="#DDD" />
+          <RiMenu2Fill size={24} color="#F1F3F9" />
         </button>
         <button type="button">
-          <RiSearchLine size={24} color="#DDD" />
+          <RiSearchLine size={24} color="#F1F3F9" />
         </button>
       </div>
 

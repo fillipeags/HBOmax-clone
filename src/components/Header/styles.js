@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  width: 100vw;
   height: 40px;
   background: none;
   padding: 10px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  z-index: 1;
 
   button {
     background: none;
@@ -54,7 +56,7 @@ export const ProfileContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content:center;
-    margin-right: 0px;
+    margin-right: 80px;
   }
 
   img {
