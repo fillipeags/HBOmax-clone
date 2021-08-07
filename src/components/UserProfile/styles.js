@@ -15,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  margin-top: 150px;
+  margin-top: 80px;
   width: 160px;
   height: 160px;
   border-radius: 50%;
