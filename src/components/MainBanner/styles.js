@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import mainImg from '../../assets/images/mortalkombat.jpeg';
 
 export const BannerContainer = styled.main`
-  height: 720px;
-  background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)),  url(${mainImg});
+  height: 100vh;
+  background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)),  url(${mainImg});
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ export const Actions = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 160px;
 
   @media (max-width: 426px) {
       width: 280px;
