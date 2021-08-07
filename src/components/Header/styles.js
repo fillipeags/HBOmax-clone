@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.header`
   width: 100vw;
   height: 40px;
-  background: none;
+  background: ${({ scroll }) => (scroll ? 'black' : 'transparent')};
   padding: 10px 40px;
   display: flex;
   align-items: center;

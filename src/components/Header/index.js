@@ -1,11 +1,23 @@
+import React, { useState } from 'react';
 import { RiMenu2Fill, RiSearchLine } from 'react-icons/ri';
 import logoImg from '../../assets/images/logo.svg';
 import profileImg from '../../assets/images/profileImage.png';
 import { Container, ImgContainer, ProfileContainer } from './styles';
 
 export default function Header() {
+  const [headerScroll, setHeaderScroll] = useState(null);
+
+  const handleHeaderScroll = () => {
+    if (window.scrollY >= 100) {
+      setHeaderScroll(true);
+    } else {
+      setHeaderScroll(false);
+    }
+  };
+  window.addEventListener('scroll', handleHeaderScroll);
+
   return (
-    <Container>
+    <Container scroll={headerScroll}>
       <div>
         <button type="button">
           <RiMenu2Fill size={24} color="#F1F3F9" />
