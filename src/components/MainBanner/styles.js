@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import mainImg from '../../assets/images/mortalkombat.jpeg';
+import mainImgalt from '../../assets/images/mortalKombat-mobile.jpeg';
 
 export const BannerContainer = styled.main`
   height: 100vh;
@@ -10,22 +11,25 @@ export const BannerContainer = styled.main`
   align-items: flex-start;
   justify-content: flex-end;
 
-
   img {
     margin-left: 50px;
   }
+
+
+  @media (max-width: 1026px) {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
 
   @media (min-width: 2161px) {
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
 
-  @media (max-width: 1026px) {
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-  }
-
   @media (max-width: 426px) {
+    background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,1)),  url(${mainImgalt});
+
     img {
       width: 200px;
     }

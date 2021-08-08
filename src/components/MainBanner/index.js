@@ -25,7 +25,6 @@ export default function MainBanner() {
 
         <InfoBtn>More Info</InfoBtn>
       </Actions>
-
     </BannerContainer>
   );
 }
