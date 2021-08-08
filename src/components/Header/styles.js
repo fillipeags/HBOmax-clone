@@ -64,7 +64,7 @@ export const ProfileContainer = styled.div`
   }
 
   h3 {
-    color: ${({ theme }) => theme.colors.gray[100]}
+    color: ${({ theme }) => theme.colors.gray[300]}
   }
 
   @media (max-width: 426px) {

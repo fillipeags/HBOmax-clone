@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { RiMenu2Fill, RiSearchLine } from 'react-icons/ri';
 import logoImg from '../../assets/images/logo.svg';
 import profileImg from '../../assets/images/profileImage.png';
+import AccountModal from '../AccountModal';
 import { Container, ImgContainer, ProfileContainer } from './styles';
 
 export default function Header() {
   const [headerScroll, setHeaderScroll] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleHeaderScroll = () => {
     if (window.scrollY >= 100) {
@@ -16,14 +18,20 @@ export default function Header() {
   };
   window.addEventListener('scroll', handleHeaderScroll);
 
+  if (isModalOpen) {
+    window.document.body.style.overflow = 'hidden';
+  } else {
+    window.document.body.style.overflow = 'auto';
+  }
+
   return (
     <Container scroll={headerScroll}>
       <div>
         <button type="button">
-          <RiMenu2Fill size={24} color="#F1F3F9" />
+          <RiMenu2Fill size={24} color="#DDD" />
         </button>
         <button type="button">
-          <RiSearchLine size={24} color="#F1F3F9" />
+          <RiSearchLine size={24} color="#DDD" />
         </button>
       </div>
 
@@ -34,13 +42,14 @@ export default function Header() {
       </div>
 
       <ProfileContainer>
-        <button type="button">
+        <button type="button" onClick={() => setIsModalOpen(!isModalOpen)}>
           <ImgContainer>
             <img src={profileImg} alt="Profile" />
           </ImgContainer>
           <h3>Fillipe</h3>
         </button>
       </ProfileContainer>
+      <AccountModal isModalOpen={isModalOpen} />
     </Container>
   );
 }

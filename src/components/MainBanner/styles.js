@@ -10,6 +10,7 @@ export const BannerContainer = styled.main`
   align-items: flex-start;
   justify-content: flex-end;
 
+
   img {
     margin-left: 50px;
   }
