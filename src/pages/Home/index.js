@@ -2,7 +2,7 @@
 import MainBanner from '../../components/MainBanner';
 import Header from '../../components/Header';
 import { Content } from './styles';
-import MediumCard from '../../components/Cards/MediumCard';
+import ContinueWatching from '../../components/Cards/ContinueWatching';
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <MainBanner />
       <Content>
-        <MediumCard />
+        <ContinueWatching />
       </Content>
     </>
   );

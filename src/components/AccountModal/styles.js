@@ -15,7 +15,6 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
 `;
 
 export const Content = styled.div`
@@ -24,7 +23,6 @@ export const Content = styled.div`
   background: black;
   display: flex;
   align-items: center;
-
 `;
 
 export const SelectedContent = styled.div`
