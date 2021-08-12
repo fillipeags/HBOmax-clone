@@ -1,20 +1,12 @@
 import styled from 'styled-components';
-import mainImg from '../../assets/images/mortalkombat.jpeg';
-import mainImgalt from '../../assets/images/mortalKombat-mobile.jpeg';
 
 export const BannerContainer = styled.main`
+  object-fit: contain;
   height: 100vh;
-  background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)),  url(${mainImg});
-  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-
-  img {
-    margin-left: 50px;
-  }
-
 
   @media (max-width: 1026px) {
     background-size: 100% 100%;
@@ -27,22 +19,20 @@ export const BannerContainer = styled.main`
     background-repeat: no-repeat;
   }
 
-  @media (max-width: 426px) {
-    background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,1)),  url(${mainImgalt});
-
-    img {
-      width: 200px;
-    }
-  }
 `;
 
 export const Title = styled.div`
   max-width: 480px;
-  h4, p {
-    color: white;
+  h1, p {
+    color: ${({ theme }) => theme.colors.gray[100]};
     margin-left: 46px;
-    margin-bottom: -10px;
+    margin-bottom: -4px;
   }
+
+  h1 {
+    font-size: 72px;
+  }
+
   margin-bottom: 40px;
 
   @media (max-width: 426px) {
