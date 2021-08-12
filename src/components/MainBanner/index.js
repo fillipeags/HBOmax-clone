@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState, useEffect } from 'react';
 
 import { RiPlayFill } from 'react-icons/ri';
@@ -9,7 +10,7 @@ import {
 import truncate from '../../utils/truncate';
 
 import api from '../../services/api';
-import requests from '../../services/requests';
+import { requests } from '../../services/requests';
 
 export default function MainBanner() {
   const [featuredShow, setFeaturedShow] = useState([]);
@@ -26,7 +27,7 @@ export default function MainBanner() {
   return (
     <BannerContainer style={{
       backgroundSize: 'cover',
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) ,url("https://image.tmdb.org/t/p/original${featuredShow?.backdrop_path}")`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) ,url("https://image.tmdb.org/t/p/original/${featuredShow?.backdrop_path}")`,
       backdropPosition: 'center center',
     }}
     >

@@ -5,35 +5,32 @@ import {
   CardsContainer, Container,
 } from './styles';
 
-const baseImgUrl = 'https://image.tmdb.org/t/p/original';
+import { baseImgUrl } from '../../../services/requests';
 
 export default function CardsList({
-  // eslint-disable-next-line no-unused-vars
-  title, fetchUrl, categoryDescription, isBoxSize, isMediumSize, isBiggerSize, isCoverSize,
+  title, fetchUrl, categoryDescription, isBanner,
 }) {
   const [shows, setShows] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const request = await api.get(fetchUrl);
-      setShows(request.data.results);
-      // eslint-disable-next-line no-console
-      console.log(request.data);
-      return request;
-    }
-    fetchData();
-  }, [fetchUrl]);
+    const fetch = async () => {
+      await api.get(fetchUrl).then((response) => setShows(
+        response.data.results,
+      ));
+    };
+    fetch();
+  }, []);
 
   return (
     <Container>
       <h2>{title}</h2>
       <p>{categoryDescription}</p>
 
-      <CardsContainer>
+      <CardsContainer isBanner={isBanner}>
         {shows.map((show) => show.backdrop_path !== null && (
           <img
             key={show.id}
-            src={`${baseImgUrl}${show.backdrop_path}`}
+            src={`${baseImgUrl}${isBanner ? show.backdrop_path : show.poster_path}`}
             alt={show.title}
           />
         ))}
@@ -46,9 +43,11 @@ export default function CardsList({
 CardsList.propTypes = {
   title: PropTypes.string.isRequired,
   fetchUrl: PropTypes.string.isRequired,
-  categoryDescription: PropTypes.string.isRequired,
-  isBoxSize: PropTypes.bool.isRequired,
-  isMediumSize: PropTypes.bool.isRequired,
-  isBiggerSize: PropTypes.bool.isRequired,
-  isCoverSize: PropTypes.bool.isRequired,
+  categoryDescription: PropTypes.string,
+  isBanner: PropTypes.bool,
+};
+
+CardsList.defaultProps = {
+  categoryDescription: '',
+  isBanner: false,
 };

@@ -12,8 +12,8 @@ export default function SplashLoading() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
-  });
+    }, 8000);
+  }, []);
 
   if (!isLoading) {
     return (

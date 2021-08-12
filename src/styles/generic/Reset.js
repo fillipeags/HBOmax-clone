@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import bgImg from '../../assets/images/bgImg.png';
 
 const Reset = createGlobalStyle`
   html {
@@ -17,21 +18,22 @@ const Reset = createGlobalStyle`
     }
   }
 
-  /* h1,h2,h3,h4,h5,h6,p,img,span, button{ */
-    /* -webkit-touch-callout: none;
+  h1,h2,h3,h4,h5,h6,p,img,span, button{
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;  */
-  /* } */
+    user-select: none;
+  }
 
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'MartelSans', sans-serif;
-    /* max-width: 100vw; */
+    background:linear-gradient(rgba(0,0,0,0), rgba(255,0,0,0)), url(${bgImg});
+    background-size: 100% 100%;
   }
 
   button {

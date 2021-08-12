@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const BannerContainer = styled.main`
+export const BannerContainer = styled.header`
   object-fit: contain;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -12,7 +12,6 @@ export const BannerContainer = styled.main`
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-
 
   @media (min-width: 2161px) {
     background-size: 100% auto;

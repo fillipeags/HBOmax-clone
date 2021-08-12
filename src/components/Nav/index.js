@@ -20,10 +20,7 @@ export default function Nav() {
         setNavScroll(false);
       }
     });
-
-    return () => {
-      window.removeEventListener('scroll');
-    };
+    window.removeEventListener('scroll', null);
   }, []);
 
   useEffect(() => {

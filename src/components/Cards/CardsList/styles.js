@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-
-
   margin-left: 40px;
-
   color: #fff;
 
   h2{
@@ -27,12 +24,15 @@ export const CardsContainer = styled.section`
   overflow-x: scroll;
   padding: 0 50px 50px 0px;
 
-
+  &::-webkit-scrollbar {
+    display: none;
+  }
   img {
     object-fit: contain;
     width: 100%;
-    max-height: 200px;
+    max-height: ${(props) => (props.isBanner ? '200px' : '300px')};
     transition: transform 450ms;
     margin-right: 10px;
+    cursor: pointer;
   }
 `;

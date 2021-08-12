@@ -4,6 +4,7 @@ import bgImg from '../../assets/images/bgImg.png';
 export const Container = styled.main`
   height: 100vh;
   background: url(${bgImg});
+  background-size: 100% 100%;
   display:flex;
   flex-direction: column;
   align-items: center;
