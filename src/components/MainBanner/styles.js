@@ -24,7 +24,6 @@ export const Title = styled.div`
   max-width: 480px;
   h1, p ,span{
     color: ${({ theme }) => theme.colors.gray[100]};
-
   }
 
   p {
@@ -49,7 +48,12 @@ export const Title = styled.div`
   margin-bottom: 40px;
 
   @media (max-width: 426px) {
+      h1 {
+        font-size: 36px;
+      }
+
       font-size: 12px;
+      max-width: 300px;
   }
 `;
 
@@ -61,7 +65,7 @@ export const Actions = styled.div`
 
   @media (max-width: 426px) {
       width: 280px;
-      margin-bottom: 360px;
+      margin-bottom: 60px;
   }
 `;
 

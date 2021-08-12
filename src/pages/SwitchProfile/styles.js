@@ -8,10 +8,7 @@ export const Container = styled.main`
   display:flex;
   flex-direction: column;
   align-items: center;
-
-  @media (max-width: 376px) {
-    justify-content: center;
-  }
+  justify-content: center;
 `;
 
 export const Header = styled.header`
@@ -48,6 +45,10 @@ export const ProfilesContainer = styled.div`
   align-items:center;
   justify-content:center;
   gap: 60px;
+
+  @media (max-width : 376px){
+    gap: 30px;
+  }
 `;
 
 export const ProfileOptions = styled.div`

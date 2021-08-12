@@ -23,6 +23,10 @@ export const Content = styled.div`
   background: black;
   display: flex;
   align-items: center;
+
+  @media (max-width: 1026px){
+    width: 100%;
+  }
 `;
 
 export const SelectedContent = styled.div`
@@ -34,6 +38,12 @@ export const SelectedContent = styled.div`
   h1 {
     font-weight: 300;
     font-size: 42px;
+  }
+
+  @media (max-width: 426px){
+    h1 {
+      font-size: 32px;
+    }
   }
 `;
 
@@ -64,6 +74,13 @@ export const CenterContent = styled.div`
       cursor: pointer;
     }
   }
+
+  @media (max-width: 426px){
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
 `;
 
 export const SideBar = styled.div`
@@ -92,5 +109,17 @@ export const SideBar = styled.div`
 
   hr {
     margin: 40px 0px;
+  }
+
+  @media (max-width: 426px){
+    width: 80%;
+    a {
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    hr {
+      margin: 20px 0px;
+    }
   }
 `;
