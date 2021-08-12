@@ -8,21 +8,22 @@ export const Button = styled.button`
   width: 200px;
   height: 44px;
   border: none;
-  cursor: pointer;
-  background:rgba(255, 255, 255, 0.1);
-  text-transform: uppercase;
-  margin-top: 50px;
-  margin-bottom: 28px;
-  border-radius: 26px;
+  color: ${({ theme }) => theme.colors.gray[100]};
+
+  margin: 50px 0px 28px 0px;
+  padding: 10px;
+  border-radius: 25px;
 
   font-size: 18px;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.gray[100]};
-  padding: 10px;
+  text-transform: uppercase;
+
+  background:rgba(255, 255, 255, 0.1);
+
   transition: 0.3s ease-in-out;
 
   span{
-    font-size: 40px;
+    font-size: 26px;
     font-weight: bold;
     margin-right: 10px;
     color: ${({ theme }) => theme.colors.gray[400]};

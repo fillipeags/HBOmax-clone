@@ -36,6 +36,7 @@ const Reset = createGlobalStyle`
 
   button {
     cursor: pointer;
+
   }
 
   a {
