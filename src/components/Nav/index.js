@@ -13,15 +13,17 @@ export default function Nav() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        setNavScroll(true);
-      } else {
-        setNavScroll(false);
-      }
-    });
+    const handleScroll = () => {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          setNavScroll(true);
+        } else {
+          setNavScroll(false);
+        }
+      });
+    };
     return () => {
-      window.removeEventListener('scroll');
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

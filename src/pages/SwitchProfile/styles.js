@@ -21,13 +21,14 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.img`
-  width: 135px;
+  width: 128px;
   margin-top: 28px;
 `;
 
 export const Heading = styled.h1`
   font-size: 48px;
   font-weight: 400;
+
   color: ${({ theme }) => theme.colors.gray[200]};
   margin-top: 40px;
 
@@ -48,7 +49,7 @@ export const ProfilesContainer = styled.div`
   gap: 60px;
 `;
 
-export const CreateProfileContainer = styled.div`
+export const ProfileOptions = styled.div`
   display: flex;
   align-items:center;
   justify-content:center;
@@ -56,23 +57,23 @@ export const CreateProfileContainer = styled.div`
 `;
 
 export const MButton = styled.button`
-  max-width: 400px;
   display: flex;
   align-items:center;
   justify-content:center;
 
+  max-width: 400px;
+  margin-top: 20px;
+
   border:none;
   background: none;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-top: 20px;
   color: rgb(158, 134, 255);
 
+  font-size: 18px;
+  text-transform: uppercase;
   font-weight: bold;
 
   &:hover {
     color: ${({ theme }) => theme.colors.gray[100]};
     transition: 0.3s ease-in-out;
-    cursor: pointer;
   }
 `;
