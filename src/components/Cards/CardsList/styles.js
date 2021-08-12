@@ -36,3 +36,7 @@ export const CardsContainer = styled.section`
     cursor: pointer;
   }
 `;
+
+export const SkeletonContainer = styled.div`
+  margin-right: 10px;
+`;
