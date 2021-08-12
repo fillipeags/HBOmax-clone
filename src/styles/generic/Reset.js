@@ -17,21 +17,21 @@ const Reset = createGlobalStyle`
     }
   }
 
-  h1,h2,h3,h4,h5,h6,p,img,span, button{
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-  }
+  /* h1,h2,h3,h4,h5,h6,p,img,span, button{ */
+    /* -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  */
+  /* } */
 
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'MartelSans', sans-serif;
-    max-width: 100vw;
+    /* max-width: 100vw; */
   }
 
   button {

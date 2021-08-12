@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { RiMenu2Fill, RiSearchLine } from 'react-icons/ri';
 import logoImg from '../../assets/images/logo.svg';
 import profileImg from '../../assets/images/profileImage.png';
@@ -9,14 +9,18 @@ export default function Header() {
   const [headerScroll, setHeaderScroll] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleHeaderScroll = () => {
-    if (window.scrollY >= 100) {
-      setHeaderScroll(true);
-    } else {
-      setHeaderScroll(false);
-    }
-  };
-  window.addEventListener('scroll', handleHeaderScroll);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        setHeaderScroll(true);
+      } else {
+        setHeaderScroll(false);
+      }
+    });
+    return () => {
+      window.removeEventListener('scroll');
+    };
+  }, []);
 
   if (isModalOpen) {
     window.document.body.style.overflow = 'hidden';
