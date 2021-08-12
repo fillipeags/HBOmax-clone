@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+export const Container = styled.nav`
   width: 100vw;
   height: 40px;
   background: ${({ scroll }) => (scroll ? 'black' : 'transparent')};
   padding: 10px 40px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   position: fixed;
   z-index: 1;
 
@@ -15,11 +17,11 @@ export const Container = styled.header`
     background: none;
     border: none;
     cursor: pointer;
-
     margin-right: 40px;
   }
 
   transition: 0.15s ease-out;
+
   &:hover{
     background: ${({ theme }) => theme.colors.gray[900]};
     transition: 0.15s ease-in;
@@ -53,14 +55,9 @@ export const Container = styled.header`
 export const ProfileContainer = styled.div`
   button {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content:center;
     margin-right: 80px;
-  }
-
-  img {
-    width: 48px;
   }
 
   h3 {
@@ -83,7 +80,7 @@ export const ImgContainer = styled.div`
   height: 36px;
   background: none;
   border: 4px solid rgb(91,19, 200);
-  border-radius: 100px;
+  border-radius: 25px;
   overflow:hidden;
 
   margin-right: 10px;

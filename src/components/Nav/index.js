@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { RiMenu2Fill, RiSearchLine } from 'react-icons/ri';
+
 import logoImg from '../../assets/images/logo.svg';
 import profileImg from '../../assets/images/profileImage.png';
+
 import AccountModal from '../AccountModal';
+
 import { Container, ImgContainer, ProfileContainer } from './styles';
 
-export default function Header() {
-  const [headerScroll, setHeaderScroll] = useState(null);
+export default function Nav() {
+  const [navScroll, setNavScroll] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
-        setHeaderScroll(true);
+        setNavScroll(true);
       } else {
-        setHeaderScroll(false);
+        setNavScroll(false);
       }
     });
     return () => {
@@ -22,14 +25,16 @@ export default function Header() {
     };
   }, []);
 
-  if (isModalOpen) {
-    window.document.body.style.overflow = 'hidden';
-  } else {
-    window.document.body.style.overflow = 'auto';
-  }
+  useEffect(() => {
+    if (isModalOpen) {
+      window.document.body.style.overflow = 'hidden';
+    } else {
+      window.document.body.style.overflow = 'auto';
+    }
+  }, [isModalOpen]);
 
   return (
-    <Container scroll={headerScroll}>
+    <Container scroll={navScroll}>
       <div>
         <button type="button">
           <RiMenu2Fill size={24} color="#DDD" />
@@ -47,11 +52,15 @@ export default function Header() {
 
       <ProfileContainer>
         <button type="button" onClick={() => setIsModalOpen(!isModalOpen)}>
+
           <ImgContainer>
             <img src={profileImg} alt="Profile" />
           </ImgContainer>
-          <h3>Fillipe</h3>
+
+          <h3>John Doe</h3>
+
         </button>
+
       </ProfileContainer>
       <AccountModal isModalOpen={isModalOpen} />
     </Container>
