@@ -45,7 +45,7 @@ export default function CardsList({
           ))}
 
           {isLoading && [1, 2, 3, 4, 5, 6, 7].map((key) => (
-            <SkeletonContainer>
+            <SkeletonContainer key={key}>
               <Skeleton width={200} height={300} />
             </SkeletonContainer>
           ))}

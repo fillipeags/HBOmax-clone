@@ -7,8 +7,8 @@ export default function Cards() {
   return (
     <>
       <CardsList
-        title="Romance Movies"
-        fetchUrl={requests.fetchRomanceMovies}
+        title="Originals"
+        fetchUrl={requests.fetchHBOOriginals}
 
       />
 
