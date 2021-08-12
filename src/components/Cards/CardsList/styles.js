@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  margin-left: 60px;
+
+
+  margin-left: 40px;
 
   color: #fff;
 
@@ -20,12 +22,11 @@ export const Container = styled.main`
 
 export const CardsContainer = styled.section`
   display: flex;
-
   text-align: center;
   overflow-y: hidden;
   overflow-x: scroll;
-  padding: 20px;
-  padding-left: 0px;
+  padding: 0 50px 50px 0px;
+
 
   img {
     object-fit: contain;

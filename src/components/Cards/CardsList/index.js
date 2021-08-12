@@ -7,7 +7,10 @@ import {
 
 const baseImgUrl = 'https://image.tmdb.org/t/p/original';
 
-export default function CardsList({ title, fetchUrl, categoryDescription }) {
+export default function CardsList({
+  // eslint-disable-next-line no-unused-vars
+  title, fetchUrl, categoryDescription, isBoxSize, isMediumSize, isBiggerSize, isCoverSize,
+}) {
   const [shows, setShows] = useState([]);
 
   useEffect(() => {
@@ -27,11 +30,11 @@ export default function CardsList({ title, fetchUrl, categoryDescription }) {
       <p>{categoryDescription}</p>
 
       <CardsContainer>
-        {shows.map((show) => (
+        {shows.map((show) => show.backdrop_path !== null && (
           <img
             key={show.id}
             src={`${baseImgUrl}${show.backdrop_path}`}
-            alt={show.name}
+            alt={show.title}
           />
         ))}
       </CardsContainer>
@@ -44,4 +47,8 @@ CardsList.propTypes = {
   title: PropTypes.string.isRequired,
   fetchUrl: PropTypes.string.isRequired,
   categoryDescription: PropTypes.string.isRequired,
+  isBoxSize: PropTypes.bool.isRequired,
+  isMediumSize: PropTypes.bool.isRequired,
+  isBiggerSize: PropTypes.bool.isRequired,
+  isCoverSize: PropTypes.bool.isRequired,
 };
