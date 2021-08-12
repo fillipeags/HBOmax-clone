@@ -23,14 +23,28 @@ export const BannerContainer = styled.main`
 
 export const Title = styled.div`
   max-width: 480px;
-  h1, p {
+  h1, p ,span{
     color: ${({ theme }) => theme.colors.gray[100]};
+
+  }
+
+  p {
+    margin-top:4px;
     margin-left: 46px;
-    margin-bottom: -4px;
+    margin-bottom: 0px;
+
+  }
+
+  span {
+    margin-left: 46px;
+
+    font-weight: bold;
   }
 
   h1 {
     font-size: 72px;
+    margin-left: 40px;
+    margin-bottom: 10px;
   }
 
   margin-bottom: 40px;

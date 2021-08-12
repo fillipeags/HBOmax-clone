@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+
 import { RiPlayFill } from 'react-icons/ri';
+
 import {
-  Actions,
-  BannerContainer, InfoBtn, PlayContainer, Title,
+  Actions, BannerContainer, InfoBtn, PlayContainer, Title,
 } from './styles';
 
-// import titleImg from '../../assets/images/mortalkombat-title.png';
+import truncate from '../../utils/truncate';
+
 import api from '../../services/api';
 import requests from '../../services/requests';
 
@@ -13,19 +15,13 @@ export default function MainBanner() {
   const [featuredShow, setFeaturedShow] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const request = await api.get(requests.fetchTrending);
-      setFeaturedShow(
-        request.data.results[Math.floor(Math.random() * request.data.results.length - 1)],
-      );
-      return request;
-    }
-    fetchData();
+    const fetch = async () => {
+      await api.get(requests.fetchTrending).then((response) => setFeaturedShow(
+        response.data.results[Math.floor(Math.random() * response.data.results.length - 1)],
+      ));
+    };
+    fetch();
   }, []);
-
-  function truncate(str, n) {
-    return str?.length > n ? `${str.substr(0, n - 1)}...` : str;
-  }
 
   return (
     <BannerContainer style={{
@@ -37,7 +33,7 @@ export default function MainBanner() {
 
       <Title>
         <h1>{featuredShow?.title || featuredShow?.name || featuredShow?.original_name}</h1>
-        <p>WATCH NOW</p>
+        <span>WATCH NOW</span>
         <p>{truncate(featuredShow?.overview, 200)}</p>
       </Title>
 
