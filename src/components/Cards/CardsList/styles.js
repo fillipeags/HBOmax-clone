@@ -9,11 +9,13 @@ export const Container = styled.main`
     font-size: 26px;
     line-height: 34px;
     margin-bottom: 0px;
+    margin-left: 10px;
   }
 
   p {
     margin-top: 4px;
-    color: ${({ theme }) => theme.colors.gray[400]}
+    color: ${({ theme }) => theme.colors.gray[400]};
+    margin-left: 10px;
   }
 
   @media (min-width: 2560px) {
