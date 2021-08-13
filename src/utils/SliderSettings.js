@@ -1,4 +1,25 @@
+/* eslint-disable react/prop-types */
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+
+const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+  <>
+    <IoIosArrowBack
+      {...props}
+      color="white"
+      aria-disabled={currentSlide === slideCount - 1}
+    />
+
+  </>
+);
+const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+  <>
+    <IoIosArrowForward
+      {...props}
+      color="white"
+      aria-disabled={currentSlide === slideCount - 1}
+    />
+  </>
+);
 
 const settings = {
   dots: false,
@@ -9,8 +30,8 @@ const settings = {
   initialSlide: 0,
   variableWidth: true,
   adaptiveHeight: true,
-  prevArrow: <IoIosArrowBack color="white" />,
-  nextArrow: <IoIosArrowForward color="white" />,
+  prevArrow: <SlickArrowLeft />,
+  nextArrow: <SlickArrowRight />,
   responsive: [
     {
       breakpoint: 480,
