@@ -4,13 +4,11 @@ import bgImg from '../../assets/images/bgImg.png';
 export const Container = styled.main`
   height: 100vh;
   background: url(${bgImg});
+  background-size: 100% 100%;
   display:flex;
   flex-direction: column;
   align-items: center;
-
-  @media (max-width: 376px) {
-    justify-content: center;
-  }
+  justify-content: center;
 `;
 
 export const Header = styled.header`
@@ -21,13 +19,14 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.img`
-  width: 135px;
+  width: 128px;
   margin-top: 28px;
 `;
 
 export const Heading = styled.h1`
   font-size: 48px;
   font-weight: 400;
+
   color: ${({ theme }) => theme.colors.gray[200]};
   margin-top: 40px;
 
@@ -46,9 +45,17 @@ export const ProfilesContainer = styled.div`
   align-items:center;
   justify-content:center;
   gap: 60px;
+
+  @media (max-width : 376px){
+    gap: 30px;
+  }
+
+  @media (max-width : 1081px){
+    gap: 40px;
+  }
 `;
 
-export const CreateProfileContainer = styled.div`
+export const ProfileOptions = styled.div`
   display: flex;
   align-items:center;
   justify-content:center;
@@ -56,23 +63,23 @@ export const CreateProfileContainer = styled.div`
 `;
 
 export const MButton = styled.button`
-  max-width: 400px;
   display: flex;
   align-items:center;
   justify-content:center;
 
+  max-width: 400px;
+  margin-top: 20px;
+
   border:none;
   background: none;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-top: 20px;
   color: rgb(158, 134, 255);
 
+  font-size: 18px;
+  text-transform: uppercase;
   font-weight: bold;
 
   &:hover {
     color: ${({ theme }) => theme.colors.gray[100]};
     transition: 0.3s ease-in-out;
-    cursor: pointer;
   }
 `;

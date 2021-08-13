@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import {
-
-  Container,
-  Heading3, ImageContainer, ProfilePic,
+  Container, Heading3, ImageContainer, ProfilePic,
 } from './styles';
 
 export default function UserProfile({ profileImg, userName }) {

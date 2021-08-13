@@ -1,21 +1,41 @@
-import React from 'react';
+/* eslint-disable no-console */
+import React, { useState, useEffect } from 'react';
+
 import { RiPlayFill } from 'react-icons/ri';
+
 import {
-  Actions,
-  BannerContainer, InfoBtn, PlayContainer, Title,
+  Actions, BannerContainer, InfoBtn, PlayContainer, Title,
 } from './styles';
 
-import titleImg from '../../assets/images/mortalkombat-title.png';
+import truncate from '../../utils/truncate';
+
+import api from '../../services/api';
+import { requests } from '../../services/requests';
 
 export default function MainBanner() {
-  return (
-    <BannerContainer>
+  const [featuredShow, setFeaturedShow] = useState([]);
 
-      <img src={titleImg} alt="Mortal Kombat Movie Title" />
+  useEffect(() => {
+    const fetch = async () => {
+      await api.get(requests.fetchTrending).then((response) => setFeaturedShow(
+        response.data.results[Math.floor(Math.random() * response.data.results.length - 1)],
+      ));
+    };
+    fetch();
+  }, []);
+
+  return (
+    <BannerContainer style={{
+      backgroundSize: 'cover',
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) ,url("https://image.tmdb.org/t/p/original/${featuredShow?.backdrop_path}")`,
+      backdropPosition: 'center center',
+    }}
+    >
 
       <Title>
-        <h4>NEW MOVIE</h4>
-        <p>Earth’s greatest champions join a deadly battle to save the universe.</p>
+        <h1>{featuredShow?.title || featuredShow?.name || featuredShow?.original_name}</h1>
+        <span>WATCH NOW</span>
+        <p>{truncate(featuredShow?.overview, 200)}</p>
       </Title>
 
       <Actions>

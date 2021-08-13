@@ -1,52 +1,59 @@
 import styled from 'styled-components';
-import mainImg from '../../assets/images/mortalkombat.jpeg';
-import mainImgalt from '../../assets/images/mortalKombat-mobile.jpeg';
 
-export const BannerContainer = styled.main`
-  height: 100vh;
-  background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)),  url(${mainImg});
-  background-size: 100% 100%;
+export const BannerContainer = styled.header`
+  object-fit: contain;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-
-  img {
-    margin-left: 50px;
-  }
-
 
   @media (max-width: 1026px) {
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
 
-
   @media (min-width: 2161px) {
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
 
-  @media (max-width: 426px) {
-    background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,1)),  url(${mainImgalt});
-
-    img {
-      width: 200px;
-    }
-  }
 `;
 
 export const Title = styled.div`
   max-width: 480px;
-  h4, p {
-    color: white;
-    margin-left: 46px;
-    margin-bottom: -10px;
+  h1, p ,span{
+    color: ${({ theme }) => theme.colors.gray[100]};
   }
+
+  p {
+    margin-top:4px;
+    margin-left: 46px;
+    margin-bottom: 0px;
+
+  }
+
+  span {
+    margin-left: 46px;
+
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 72px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
+
   margin-bottom: 40px;
 
   @media (max-width: 426px) {
+      h1 {
+        font-size: 36px;
+      }
+
       font-size: 12px;
+      max-width: 300px;
   }
 `;
 
@@ -54,12 +61,7 @@ export const Actions = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 160px;
-
-  @media (max-width: 426px) {
-      width: 280px;
-      margin-bottom: 360px;
-  }
+  margin-bottom: 60px;
 `;
 
 export const PlayContainer = styled.button`
