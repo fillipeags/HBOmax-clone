@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  margin-top: 40px;
   margin-left: 40px;
   color: #fff;
 

@@ -61,6 +61,7 @@ export const Actions = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 60px;
 `;
 
 export const PlayContainer = styled.button`
