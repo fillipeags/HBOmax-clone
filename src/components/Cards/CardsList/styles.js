@@ -55,6 +55,12 @@ export const CardsContainer = styled.section`
     cursor: pointer;
   }
 
+  @media(max-width: 1081px) {
+    img {
+      height: ${(props) => (props.isBanner && '161px')};
+    }
+  }
+
 
 `;
 
