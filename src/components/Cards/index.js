@@ -45,6 +45,12 @@ export default function Cards() {
         title="Romance Movies"
         fetchUrl={requests.fetchRomanceMovies}
       />
+
+      <CardsList
+        title="Horror Movies"
+        categoryDescription="The best Horror Movies to hunt you at night and not let you even blink"
+        fetchUrl={requests.fetchHorrorMovies}
+      />
     </>
   );
 }

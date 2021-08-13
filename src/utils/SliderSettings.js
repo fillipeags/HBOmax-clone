@@ -23,7 +23,7 @@ const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
 
 const settings = {
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 6,
   slidesToScroll: 2,
