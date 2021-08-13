@@ -42,23 +42,14 @@ export const Container = styled.main`
 `;
 
 export const CardsContainer = styled.section`
-  display: flex;
-  text-align: center;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  padding: 0 50px 50px 0px;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
+  padding: 0px 50px 50px 0px;
 
   img {
     object-fit: contain;
     width: 100%;
-    max-height: ${(props) => (props.isBanner ? '200px' : '300px')};
+    max-height: ${(props) => (props.isBanner ? '250px' : '300px')};
     transition: transform 450ms;
-    margin-right: 10px;
+    margin-right: 26px;
     cursor: pointer;
   }
 `;

@@ -1,14 +1,18 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
 import api from '../../../services/api';
 import {
   CardsContainer, Container, SkeletonContainer,
 } from './styles';
 
 import { baseImgUrl } from '../../../services/requests';
+
+import settings from '../../../utils/SliderSettings';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function CardsList({
   title, fetchUrl, categoryDescription, isBanner,
@@ -30,6 +34,7 @@ export default function CardsList({
   return (
     <SkeletonTheme color="#202020" highlightColor="#444">
       <Container>
+
         {isLoading && (
           <SkeletonContainer>
             <Skeleton width={200} height={40} />
@@ -45,24 +50,26 @@ export default function CardsList({
         {!isLoading && <p>{categoryDescription}</p>}
 
         <CardsContainer isBanner={isBanner}>
+          <Slider
+            {...settings}
+          >
+            {!isLoading && shows.map((show) => show.backdrop_path !== null && (
+              <img
+                key={show.id}
+                src={`${baseImgUrl}${isBanner ? show.backdrop_path : show.poster_path}`}
+                alt={show.title}
+              />
 
-          {!isLoading && shows.map((show) => show.backdrop_path !== null && (
-            <img
-              key={show.id}
-              src={`${baseImgUrl}${isBanner ? show.backdrop_path : show.poster_path}`}
-              alt={show.title}
-            />
+            ))}
 
-          ))}
+            {isLoading && [1, 2, 3, 4, 5, 6, 7].map((key) => (
+              <SkeletonContainer key={key}>
+                <Skeleton width={200} height={300} />
+              </SkeletonContainer>
+            ))}
 
-          {isLoading && [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((key) => (
-            <SkeletonContainer key={key}>
-              <Skeleton width={200} height={300} />
-            </SkeletonContainer>
-          ))}
-
+          </Slider>
         </CardsContainer>
-
       </Container>
     </SkeletonTheme>
   );
