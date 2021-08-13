@@ -30,8 +30,19 @@ export default function CardsList({
   return (
     <SkeletonTheme color="#202020" highlightColor="#444">
       <Container>
-        <h2>{title}</h2>
-        <p>{categoryDescription}</p>
+        {isLoading && (
+          <SkeletonContainer>
+            <Skeleton width={200} height={40} />
+          </SkeletonContainer>
+        )}
+        {!isLoading && <h2>{title}</h2>}
+
+        {isLoading && (
+          <SkeletonContainer>
+            <Skeleton width={400} height={40} />
+          </SkeletonContainer>
+        )}
+        {!isLoading && <p>{categoryDescription}</p>}
 
         <CardsContainer isBanner={isBanner}>
 
@@ -44,7 +55,7 @@ export default function CardsList({
 
           ))}
 
-          {isLoading && [1, 2, 3, 4, 5, 6, 7].map((key) => (
+          {isLoading && [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((key) => (
             <SkeletonContainer key={key}>
               <Skeleton width={200} height={300} />
             </SkeletonContainer>

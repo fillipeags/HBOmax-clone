@@ -49,6 +49,10 @@ export const ProfilesContainer = styled.div`
   @media (max-width : 376px){
     gap: 30px;
   }
+
+  @media (max-width : 1081px){
+    gap: 40px;
+  }
 `;
 
 export const ProfileOptions = styled.div`

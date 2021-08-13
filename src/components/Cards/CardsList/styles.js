@@ -18,12 +18,12 @@ export const Container = styled.main`
 
   @media (min-width: 2560px) {
     h2{
-      font-size: 52px;
-      margin-bottom: 40px;
+      font-size: 38px;
+      margin-bottom: 18px;
     }
 
     p {
-      font-size:22px;
+      font-size:20px;
     }
 
     margin-bottom: 40px;
@@ -51,6 +51,8 @@ export const CardsContainer = styled.section`
   &::-webkit-scrollbar {
     display: none;
   }
+
+
   img {
     object-fit: contain;
     width: 100%;
@@ -59,20 +61,10 @@ export const CardsContainer = styled.section`
     margin-right: 10px;
     cursor: pointer;
   }
-
-  @media (min-width: 2560px) {
-     img {
-        max-height: ${(props) => (props.isBanner ? '300px' : '600px')};
-     }
-  }
-
-  @media (max-width: 426px) {
-     img {
-        max-height: ${(props) => (props.isBanner ? '100px' : '200px')};
-     }
-  }
 `;
 
 export const SkeletonContainer = styled.div`
+  margin-top: 20px;
   margin-right: 10px;
+
 `;
