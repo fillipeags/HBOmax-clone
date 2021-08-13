@@ -49,11 +49,13 @@ export const CardsContainer = styled.section`
   img {
     object-fit: contain;
     width: 100%;
-    max-height: ${(props) => (props.isBanner ? '250px' : '300px')};
+    max-height: ${(props) => (props.isBanner ? '280px' : '300px')};
     transition: transform 450ms;
     margin-right: 26px;
     cursor: pointer;
   }
+
+
 `;
 
 export const SkeletonContainer = styled.div`

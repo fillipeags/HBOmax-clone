@@ -34,16 +34,10 @@ const settings = {
   nextArrow: <SlickArrowRight />,
   responsive: [
     {
-      breakpoint: 480,
+      breakpoint: 1081,
       settings: {
-        dots: false,
-        infinite: false,
-        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 0,
-        variableWidth: true,
-        adaptiveHeight: true,
       },
     },
   ],
