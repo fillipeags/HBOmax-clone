@@ -1,10 +1,10 @@
 # HBO Max Clone Inspo
 
 <h1 align="center">
-    <img alt="GoBarber API" src="../../../code/personal/HBOmax-clone/src/assets/images/logo-2.png" />
+    <img alt="HBO Max Logo" src="./src/assets/images/logo-2.png" />
 </h1>
 
-![Logo HBO](../../../code/personal/HBOmax-clone/src/assets/images/cover.png)
+![Logo HBO](./src/assets/images/cover.png)
 ## About
 
 A HBO MAX Clone Build in React
@@ -17,7 +17,7 @@ You Can Also Check a live demo on netlify by clicking the image below:
 
 <p align="center">
   <a href="http://playhbomax.netlify.com/" target="_blank">
-    <img alt="Demo on Netlify" src="../../../code/personal/HBOmax-clone/src/assets/images/demo.png">
+    <img alt="Demo on Netlify" src="./src/assets/images/demo.png">
   </a>
 </p>
 
