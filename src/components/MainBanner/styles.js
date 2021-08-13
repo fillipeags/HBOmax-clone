@@ -61,13 +61,6 @@ export const Actions = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 160px;
-
-  @media (max-width: 1080px) {
-      width: 280px;
-      margin-bottom: 60px;
-  }
-
 `;
 
 export const PlayContainer = styled.button`
